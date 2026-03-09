@@ -1,0 +1,94 @@
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+font-family:Arial, sans-serif;
+color:white;
+overflow:hidden;
+}
+
+.screen{
+width:100vw;
+height:100vh;
+position:relative;
+background:linear-gradient(45deg,#000000,#14002b,#001933);
+transition:background 2s;
+}
+
+/* title */
+.title{
+position:absolute;
+top:40%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:60px;
+letter-spacing:10px;
+color:#00ffff;
+text-shadow:0 0 10px #00ffff,0 0 30px #ff00ff;
+transition:opacity 1s;
+}
+
+/* message */
+.message{
+position:absolute;
+bottom:30px;
+left:30px;
+opacity:1;
+transition:opacity 1s;
+}
+
+/* star shapes */
+.star{
+width:12px;
+height:12px;
+background:#00ffff;
+position:absolute;
+border-radius:50%;
+box-shadow:0 0 10px #00ffff,0 0 20px #ff00ff;
+opacity:0;
+}
+
+/* positions */
+.star:nth-of-type(1){top:10%; left:20%;}
+.star:nth-of-type(2){top:30%; left:80%;}
+.star:nth-of-type(3){top:70%; left:40%;}
+.star:nth-of-type(4){top:50%; left:10%;}
+.star:nth-of-type(5){top:80%; left:70%;}
+
+/* hover activates screensaver */
+.screen:hover{
+background:linear-gradient(45deg,#ff00ff,#000033,#00ffff);
+}
+
+.screen:hover .star{
+opacity:1;
+animation: float 5s infinite alternate ease-in-out;
+}
+
+.screen:hover .title{
+opacity:0;
+}
+
+.screen:hover .message{
+opacity:0;
+}
+
+/* animation */
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-80px);
+}
+
+100%{
+transform:translateY(80px);
+}
+
+}
