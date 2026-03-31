@@ -1,0 +1,179 @@
+# Exhibition Website (Fashion PR Portfolio Style)
+
+## index.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Glitching the Self</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Glitching the Self</h1>
+      <p class="subtitle">Digital Identity, Performance, and Fragmentation</p>
+      <p class="curator">Exhibition curated by Venus Midianga</p>
+    </header>
+
+    <section class="curatorial">
+      <h2>Curatorial Text</h2>
+      <p>
+        This exhibition, <em>Glitching the Self</em>, brings together a group of net-based artworks that explore how identity is constructed, performed, and destabilized within digital environments. Spanning works by Shawne Michaelain Holloway, Auriea Harvey, Martine Syms, and the project <em>Keeping Up Appearances</em>, these pieces collectively examine the internet not just as a platform, but as a space where the self becomes fragmented, multiplied, and mediated through screens, avatars, and interfaces.
+
+        A key throughline across these works is the use of digital performance as a strategy for interrogating identity. Holloway’s work stages the body within virtual environments, often blurring boundaries between intimacy and alienation. Similarly, Auriea Harvey’s <em>Skinonskinonskin</em> uses 3D graphics and interactive storytelling to evoke a tactile yet disembodied sense of presence.
+
+        Martine Syms’ work engages with the aesthetics of the web itself—hyperlinks, scrolling, and fragmented text—to reflect on cultural identity within digital space. Meanwhile, <em>Keeping Up Appearances</em> critiques the construction of online personas through curated self-presentation.
+
+        Together, these works align with post-internet art practices, using glitch, repetition, and fragmentation to reflect the instability of identity in digital culture.
+      </p>
+    </section>
+
+    <section class="works">
+
+      <div class="card">
+        <h3>SOMEBODY’S MIDNIGHT</h3>
+        <p class="meta">Shawne Michaelain Holloway, 2020</p>
+        <p>A performative digital environment exploring surveillance, embodiment, and vulnerability in virtual space.</p>
+        <a href="https://shawnemichaelainholloway.com/SOMEBODY-S-MIDNIGHT" target="_blank">View Work →</a>
+      </div>
+
+      <div class="card">
+        <h3>Keeping Up Appearances</h3>
+        <p class="meta">2001</p>
+        <p>An early net artwork examining curated identity and performative self-presentation online.</p>
+        <a href="https://artbase.rhizome.org/wiki/Q2940" target="_blank">View Work →</a>
+      </div>
+
+      <div class="card">
+        <h3>Skinonskinonskin</h3>
+        <p class="meta">Auriea Harvey, 2018</p>
+        <p>An interactive 3D work exploring digital embodiment and tactile experience.</p>
+        <a href="https://anthology.rhizome.org/skinonskinonskin" target="_blank">View Work →</a>
+      </div>
+
+      <div class="card">
+        <h3>Everything I’ve Ever Wanted to Know</h3>
+        <p class="meta">Martine Syms, 2007</p>
+        <p>A text-based web project reflecting on identity, culture, and digital knowledge systems.</p>
+        <a href="https://anthology.rhizome.org/everythingiveeverwantedtoknow-com" target="_blank">View Work →</a>
+      </div>
+
+    </section>
+
+  </div>
+
+</body>
+</html>
+```
+
+---
+
+## style.css
+
+```css
+body {
+  margin: 0;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 16px;
+}
+
+.curator {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ff4da6;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.curatorial p {
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.card {
+  border: 1px solid #222;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card: hover {
+  border-color: #ff4da6;
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.meta {
+  color: #888;
+  font-size: 14px;
+}
+
+a {
+  color: #ff4da6;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a: hover {
+  text-decoration: underline;
+}
+```
+
+---
+
+## ✨ Design vibe (what this gives you)
+
+* Editorial/fashion magazine feel
+* Clean portfolio layout (like a PR brand site)
+* Soft luxury typography (Playfair + Inter)
+* Hover effects = more polished
+* Works displayed like a curated campaign grid
+
+---
+
+If you want next-level (extra credit vibes), I can help you add:
+
+* images/screenshots styled like a lookbook
+* animated hover effects
+* a landing page intro (super fashion website energy)
