@@ -1,12 +1,9 @@
-// variable
-const button = document.getElementById("btn");
-const text = document.getElementById("text");
+let title = document.getElementById("title");
+let button = document.getElementById("btn");
 
-// function
-function changeText() {
-    text.textContent = "You clicked the button!";
-    text.style.color = "blue";
+function changeContent() {
+    title.textContent = "It worked!";
+    title.style.color = "red";
 }
 
-// event listener
-button.addEventListener("click", changeText);
+button.addEventListener("click", changeContent);
