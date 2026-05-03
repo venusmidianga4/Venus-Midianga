@@ -42,3 +42,6 @@ function transform() {
     state = 0;
   }
 }
+setInterval(() => {
+  document.body.click();
+}, 2500);
