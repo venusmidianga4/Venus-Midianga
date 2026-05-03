@@ -1,35 +1,44 @@
-window.addEventListener("DOMContentLoaded", function () {
+let state = 0;
 
-  let state = 0;
+const title = document.getElementById("title");
+const subtitle = document.getElementById("subtitle");
 
-  const title = document.getElementById("title");
-  const subtitle = document.getElementById("subtitle");
+document.body.addEventListener("click", transform);
 
-  document.body.addEventListener("click", function () {
+function transform() {
 
-    state++;
+  state++;
 
-    const colors = ["black", "#111", "#222", "#300", "#003"];
-    document.body.style.backgroundColor =
-      colors[Math.floor(Math.random() * colors.length)];
+  // SCREEN SHAKE
+  document.body.classList.add("shake");
+  setTimeout(() => {
+    document.body.classList.remove("shake");
+  }, 200);
 
-    if (!title || !subtitle) return;
+  // RANDOM GLITCH BACKGROUNDS
+  const colors = ["#000", "#111", "#220000", "#001a1a", "#1a001a"];
+  document.body.style.backgroundColor =
+    colors[Math.floor(Math.random() * colors.length)];
 
-    if (state === 1) {
-      title.textContent = "SIGNAL BROKEN";
-      subtitle.textContent = "system unstable...";
-    }
+  // GLITCH TEXT STATES
+  if (state === 1) {
+    title.textContent = "SIGNAL CORRUPTED";
+    subtitle.textContent = "data fracture detected";
+  }
 
-    else if (state === 2) {
-      title.textContent = "GLITCH MODE";
-      subtitle.textContent = "reality shifting...";
-    }
+  else if (state === 2) {
+    title.textContent = "MEMORY LEAK";
+    subtitle.textContent = "identity unstable";
+  }
 
-    else {
-      title.textContent = "CLICK ME";
-      subtitle.textContent = "click anywhere";
-      state = 0;
-    }
-  });
+  else if (state === 3) {
+    title.textContent = "SYSTEM BREAKDOWN";
+    subtitle.textContent = "reality is collapsing";
+  }
 
-});
+  else {
+    title.textContent = "CLICK TO STABILIZE";
+    subtitle.textContent = "or let it break again";
+    state = 0;
+  }
+}
