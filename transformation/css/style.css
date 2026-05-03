@@ -4,20 +4,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial;
-  transition: all 0.6s ease;
-  background-color: white;
+  font-family: "Courier New", monospace;
+  background-color: black;
+  color: lime;
+  overflow: hidden;
 }
 
 .container {
   text-align: center;
-  transition: all 0.6s ease;
+  position: relative;
 }
 
+/* Glitch text effect */
 h1 {
-  font-size: 40px;
+  font-size: 50px;
+  position: relative;
+  animation: flicker 1.5s infinite;
 }
 
 p {
   font-size: 18px;
+  opacity: 0.8;
+}
+
+/* flicker animation */
+@keyframes flicker {
+  0% { opacity: 1; }
+  5% { opacity: 0.2; }
+  10% { opacity: 1; }
+  20% { opacity: 0.4; }
+  30% { opacity: 1; }
+  70% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* glitch layer effect */
+.glitch {
+  text-shadow:
+    2px 2px red,
+    -2px -2px blue,
+    2px -2px lime;
 }
